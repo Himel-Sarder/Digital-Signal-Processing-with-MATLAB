@@ -62,3 +62,50 @@ grid on;
 % Step 7: Display message
 %-----------------------------------------
 disp('Coss-correlation analysis completed successfully.');
+
+
+
+
+
+
+
+%% Another way
+clc;
+clear;
+close all;
+
+% ------------------ Signal 1 ------------------
+t = 0:0.01:1;             % Time vector
+f1 = 5;                   % Frequency of x(t)
+A1 = 2;                   % Amplitude of x(t)
+x = A1 * sin(2 * pi * f1 * t);  % Signal x(t)
+
+subplot(3, 1, 1)
+plot(t, x, 'r', 'LineWidth', 2);
+title('Signal x(t) = 2 sin(2\pi \cdot 5t)');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
+
+% ------------------ Signal 2 ------------------
+f2 = 25;                  % Frequency of y(t)
+A2 = 3;                   % Amplitude of y(t)
+y = A2 * sin(2 * pi * f2 * t);  % Signal y(t)
+
+subplot(3, 1, 2)
+plot(t, y, 'b', 'LineWidth', 2);
+title('Signal y(t) = 3 sin(2\pi \cdot 25t)');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
+
+% ------------------ Cross-Correlation ------------------
+[R_xy, lags] = xcorr(x, y);
+
+subplot(3, 1, 3)
+stem(lags, R_xy, 'filled', 'LineWidth', 1.2);
+title('Cross-Correlation R_{xy}');
+xlabel('Lag');
+ylabel('Correlation Value');
+grid on;
+
