@@ -41,3 +41,12 @@ title('Convolution Result y[n]');
 xlabel('n');
 ylabel('y[n]');
 grid on;
+
+
+
+% Convolution Sum হলো দুটি discrete signal কে combine করে তৃতীয় একটি output signal তৈরির প্রক্রিয়া — যেটি সাধারণত LTI (Linear Time Invariant) system-এর response বের করতে ব্যবহার করা হয়।
+% h[n] => Impulse Response
+% Term Meaning
+% Impulse	====> একদম ছোট, দ্রুত, single spike input
+% Impulse Response (h[n]) ====>	System কিভাবে react করে তার full signature
+% Why important? ====> h[n] জানলেই system-এর সব output calculate করা যায়
