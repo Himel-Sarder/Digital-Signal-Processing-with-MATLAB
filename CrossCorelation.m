@@ -109,3 +109,29 @@ xlabel('Lag');
 ylabel('Correlation Value');
 grid on;
 
+
+% Cross-Correlation এর Applications (ব্যবহার) =========================>
+% 1. Signal Matching / Pattern Detection
+% দুইটি signal এর মধ্যে মিল খুঁজতে cross-correlation ব্যবহার করা হয়।
+% উদাহরণ: কোন নির্দিষ্ট শব্দ বা sound wave কোনো noisy recording এ আছে কি না।
+% যখন cross-correlation value বেশি হবে → signal match হচ্ছে।
+
+% 2. Time Delay / Lag Estimation
+% দুইটি signal এর মধ্যে delay বা time lag বের করতে cross-correlation ব্যবহার হয়।
+% উদাহরণ: দুটি microphone এর recorded sound থেকে source এর distance বা arrival time নির্ধারণ করা।
+
+% 3. Image Processing
+% Image template matching এ cross-correlation ব্যবহার করা হয়।
+% উদাহরণ: একটা ছোট ছবি (template) বড় ছবির মধ্যে কোথায় আছে সেটা খুঁজতে।
+
+% 4. Communications / Radar
+% Signal reception এ transmitted signal এবং received signal এর মিল খুঁজে noise কমাতে cross-correlation ব্যবহার হয়।
+% Radar বা sonar system এ object detect করার জন্য।
+
+% 5. Economics / Data Analysis
+% দুটি time series data এর মধ্যে সম্পর্ক খুঁজতে cross-correlation ব্যবহার করা হয়।
+% উদাহরণ: stock market data বা climate data এর pattern analysis।
+
+% 6. Biomedical Applications
+% EEG, ECG বা heart signal analysis এ pattern detect করার জন্য।
+% উদাহরণ: heartbeat pattern detection বা brain signal matching।
