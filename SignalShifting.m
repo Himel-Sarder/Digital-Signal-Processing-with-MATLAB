@@ -31,3 +31,16 @@ stem(n_left, x_left, 'filled');
 title('Left Shifted Signal x[n+2]');
 xlabel('n'); 
 ylabel('Amplitude');
+
+
+
+%% Continous Signal
+time_shift = 1.2;                        % Shift duration in seconds
+sample_shift = round(time_shift * Fs);   % Convert to sample count
+
+% Advance (shift left)
+y_advance = [y(sample_shift+1:end); zeros(sample_shift,1)];
+
+% Delay (shift right)
+y_delay = [zeros(sample_shift,1); y(1:end-sample_shift)];
+
