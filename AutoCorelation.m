@@ -110,6 +110,19 @@ grid on;
 % Motion detection: Video frames এর similarity measure করা
 
 
+% ধরো তোমার কাছে একটা sound wave আছে।
+% তুমি এই wave কে একটু ডানে বা বামে সরাও।
+% তারপর দেখো shifted wave এবং original wave কতটা মিলছে।
+% এই shift করার পরের distance বা amount হলো lag।
+
+% কিছু মূল দিক:
+% Lag = 0: signal নিজেই নিজে সাথে match করছে → perfect correlation।
+% Positive lag: signal কে ডানে shift করা।
+% Negative lag: signal কে বামে shift করা।
+% বড় lag → correlation সাধারণত কমে, কারণ signal আর পুরোপুরি মেলে না।
+
+% সহজভাবে:
+% Lag = signal কে কতটা সরানো হয়েছে তার পরিমাপ।
 
 % Observation	                                        বোঝায় কি?
 % Lag = 0 তে সর্বোচ্চ পিক (Highest Peak)	              নিজেকেই নিজের সাথে compare করলে সবচেয়ে বেশি similarity থাকে → Max correlation at lag = 0 
