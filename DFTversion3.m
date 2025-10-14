@@ -19,7 +19,7 @@ grid on;
 % FFT
 N = length(x);          % Number of samples
 X = fft(x);             % Built-in FFT function
-f = (0:(N/2)-1)*(Fs/N);     % Frequency axis
+f = (0:(N/2)-1)*(fs/N);     % Frequency axis
 
 % Magnitude Spectrum
 subplot(2,1,2);
