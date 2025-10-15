@@ -1,10 +1,10 @@
-﻿% Parameters
-n = -10:10;                 % Time vector from -10 to 10
-ramp = n;        
+% Parameters
+n = -10:10;                 
+ramp = (n >= 0).*n;   % Only positive side grows, negative side remains 0
 
 % Plotting
 stem(n, ramp, 'filled');
 xlabel('n');
 ylabel('Amplitude');
-title('Ramp Signal');
+title('Standard Ramp Signal');
 grid on;
